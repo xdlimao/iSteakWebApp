@@ -1,0 +1,22 @@
+.box-textimgs {
+  height: 800px;
+  border: 2px solid gray;
+  padding: 10px;
+  margin: 50px;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+
+.box-hyperlink {
+  height: 300px;
+  width: 300px;
+  border: 2px solid gray;
+  background-color: rgb(180, 180, 180);
+  padding: 10px;
+  margin: 50px;
+}
+
+.grid-button {
+  float: left;
+}
