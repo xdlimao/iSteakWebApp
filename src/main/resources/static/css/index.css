@@ -1,0 +1,35 @@
+#cxstatus {
+    border: 1px solid black;
+    padding: 50px;
+    margin: 20px;
+    text-align: center;
+    background-color: rgb(216, 211, 211);
+    margin-top: 25rem;
+    width: 60%;
+    margin-left: 7rem;
+}
+
+#cxuser {
+    border: 1px solid black;
+    padding: 50px;
+    margin: 20px;
+    text-align: center;
+    background-color: rgb(160, 159, 159);
+    width:auto;
+    height: 700px;
+    margin-top: 7rem;
+}
+
+#cnxon{
+    color: green;
+    margin-left: 4rem;
+    font-style: oblique;
+    font-size: 25px;
+
+}
+#cnxoff{
+    color: red;
+    margin-left: 4rem;
+    font-style: oblique;
+    font-size: 25px;
+}
