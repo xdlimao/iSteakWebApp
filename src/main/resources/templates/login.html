@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body>
+    <main id="container">
+        <form id="login_form" action="">
+            <div id="form_header">
+                <h1>Login</h1>
+                <img src="../static/images/logo_red.png" alt="">
+            </div>
+
+            <div id="inputs">
+                <div class="input_box">
+                    <label for="email">Usuário
+                        <div class="input_field">
+                            <i><ion-icon name="person-outline"></ion-icon></i>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </label>
+                </div>
+                <div class="input_box">
+                    <label for="password">Senha
+                        <div class="input_field">
+                            <i><ion-icon name="key-outline"></ion-icon></i>
+                            <input type="password" id="password" name="password">
+                        </div>
+                    </label>
+                    <div id="forgot_password">
+                        <a href="#">Esqueceu sua senha?</a>
+                    </div>
+                </div>
+            </div>
+           
+
+            
+
+            <button type="submit" id="login_button" > 
+                <a href="../templates/dashboard.html">Entrar</a>
+            </button>
+
+        </form>
+    </main>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

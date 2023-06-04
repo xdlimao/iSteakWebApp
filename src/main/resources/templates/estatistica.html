@@ -11,36 +11,43 @@
     <link href="../static/css/estatistica.css" rel="stylesheet" </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: #f04242;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="dashboard.html">iSteakAdmin</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="pedidos.html">Pedidos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="estatistica.html">Estatísticas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="loja.html">Loja</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="configurações.html">Configurações</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ms-auto">
-                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
-                        data-bs-target="#sairModal">Sair</button>
-                </ul>
+    <nav  class="navbar fixed-top" style="background-color: #F04242; " >
+        <div class="container-fluid"  style="display: block;">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style=" border: 2px solid black; box-shadow: none;">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="font-family: 'Times New Roman', Times, serif; font-size: x-large;">iSteak</a>
+          <div  style="background-color: #F04242;" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div style="color: white;" class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img width="30%" src="../static/images/logonova.png" alt="">iSteak</h5>
+              <button  type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+            <div class="offcanvas-body">
+            <div class="offcanvas-body">
+              <ul  class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a style="color: white;"  class="nav-link active" aria-current="page" href="../templates/dashboard.html"><ion-icon  name="home-outline"></ion-icon>  Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color: white;"  class="nav-link active" aria-current="page" href="../templates/loja.html"><ion-icon name="storefront-outline"></ion-icon>  Loja</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color: white;"  class="nav-link active" aria-current="page" href="../templates/estatistica.html"><ion-icon name="bar-chart-outline"></ion-icon>  Estatísticas</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color: white;"  class="nav-link active" aria-current="page" href="../templates/histórico_pds.html"><ion-icon name="receipt-outline"></ion-icon>  Histórico</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color: white;"  class="nav-link active" aria-current="page" href="../templates/configurações.html"><ion-icon name="settings-outline"></ion-icon>  Configurações</a>
+                </li>
+                <li class="nav-item">
+                  <a style="color: white;"  class="nav-link active" aria-current="page" href="../templates/index.html"><ion-icon name="arrow-back-circle-outline"></ion-icon>  Sair</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </nav>
+      </nav>
 
     <div class="modal fade" id="sairModal" tabindex="-1">
         <div class="modal-dialog">
@@ -110,5 +117,6 @@
         crossorigin="anonymous"></script>
 
 </body>
-
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
