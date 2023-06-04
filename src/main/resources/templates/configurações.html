@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configurações</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="../static/css/configurações.css" rel="stylesheet">
-    <link href="../static/css/toggleswitch.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/configurações.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
-
 <body>
     <nav  class="navbar fixed-top" style="background-color: #F04242; " >
         <div class="container-fluid"  style="display: block;">
@@ -49,154 +45,194 @@
             </div>
           </div>
         </div>
-      </nav>
-<main>
+      </nav> 
 
-
-    <div class="container-fluid" id="marid">
-        <div class="row">
-            <div class="col" >
-                <ul id="list" class="list-group list-group-flush ">
-                    <p style="text-align: center;"><i>Horário de funcionamento</i></p>
-                    <li id="list_item" class="list-group-item" >
-                        Segunda das <input type="text" size="1">:<input type="text" size="1"> até <input type="text"
-                            size="1">:<input type="text" size="1">
-                    </li>
-                    <li id="list_item" class="list-group-item" >
-                        Terça das <input type="text" size="1">:<input type="text" size="1"> até <input type="text"
-                            size="1">:<input type="text" size="1">
-                    </li>
-                    <li id="list_item" class="list-group-item" >
-                        Quarta das <input type="text" size="1">:<input type="text" size="1"> até <input type="text"
-                            size="1">:<input type="text" size="1">
-                    </li>
-                    <li id="list_item" class="list-group-item">
-                        Quinta das <input type="text" size="1">:<input type="text" size="1"> até <input type="text"
-                            size="1">:<input type="text" size="1">
-                    </li>
-                    <li id="list_item" class="list-group-item" >
-                        Sexta das <input type="text" size="1">:<input type="text" size="1"> até <input type="text"
-                            size="1">:<input type="text" size="1">
-                    </li>
-                    <li id="list_item" class="list-group-item" >
-                        Sábado das <input type="text" size="1">:<input type="text" size="1"> até <input type="text"
-                            size="1">:<input type="text" size="1">
-                    </li>
-                    <li id="list_item" class="list-group-item" >
-                        Domingo das <input type="text" size="1">:<input type="text" size="1"> até <input type="text"
-                            size="1">:<input type="text" size="1">
-                    </li>
-                </ul>
-                <br>
-                <button id="btn_salvar" type="button"  >Salvar</button>
-            </div>
-            <div class="col" >
-                <div class="container " id="loja_ativa">
-                    <br>
-                    <h3 >Loja ativa:</h3>
-                    <p id="io">
-                        Desativado &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label class="switch"><input type="checkbox"><span class="slider"></span></label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ativado
-                    </p>
-                </div>
-                <button type="button" class="btn btn-danger btn-lg mx-5" id="dfn">Definir</button>
-                <br>
-                <div class="container mx-5">
-                    <h1 style="margin: 2rem;">Horário Especial de Amanhã</h1>
-                    <p style="text-align: center; font-size: 20px;">Amanhã das <input type="text" size="1">:<input
-                            type="text" size="1"> até <input type="text" size="1">:<input type="text" size="1">.
-                    </p>
-                </div>
-                <button type="button" class="btn btn-danger btn-lg mx-5" id="dfn0">Definir</button>
-            </div>
+      <main>
+        <div id="txt_slv">
+          <h1>Configurações</h1>
+          <button id="salvar">Salvar Alterações</button>
         </div>
-
-        <div class="container-fluid" id="marid">
-            <h1>Forma de Pagamento e Taxa de Entrega</h1>
-            <p>
-            <h1 style="margin-left: 10rem;">Dinheiro</h3>
-                <p id="io">Desativado &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div id="cnfg_prin">
+                <div id="cnfg_st">
+                    <h3>Status da loja</h3>
+                    <p>Desativado
+                      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                    Ativado
+                    </p>
+                </div>
+                <div id="cnfg_st">
+                  <h3>Horarios de Funcionamento</h3>
+                  <p>
+                    <button id="btn_seta" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      <ion-icon style="color: black;" name="caret-down-outline"></ion-icon>
+                    </button>
+                  </p>
+              </div>
+              <div class="collapse" id="collapseExample">
+                <div id="div1" class="card card-body">
+                  <ul>
+                    <li>Segunda-Feira
+                      <div> Das
+                      <input id="input_days" type="text" size="1">:<input id="input_days" type="text" size="1">
+                        ás <input id="input_days" type="text" size="1">:<input id="input_days" type="text" size="1">
+                    </div>
+                    </li>
+                    <li>Terça-Feira
+                      <div> Das
+                        <input id="input_days" type="text" size="1">:<input id="input_days" type="text" size="1">
+                          ás <input id="input_days" type="text" size="1">:<input id="input_days" type="text" size="1">
+                      </div>
+                    </li>
+                    <li>Quarta-Feira
+                      <div> Das
+                        <input id="input_days" type="text" size="1">:<input id="input_days" type="text" size="1">
+                          ás <input  id="input_days" type="text" size="1">:<input id="input_days" type="text" size="1">
+                      </div>
+                    </li>
+                    <li>Quinta-Feira
+                      <div> Das
+                        <input id="input_days" type="text" size="1">:<input  id="input_days" type="text" size="1">
+                          ás <input id="input_days" type="text" size="1">:<input id="input_days" type="text" size="1">
+                      </div>
+                    </li>
+                    <li>Sexta-Feira
+                      <div> Das
+                        <input id="input_days" type="text" size="1">:<input id="input_days" type="text" size="1">
+                          ás <input id="input_days" type="text" size="1">:<input id="input_days" type="text" size="1">
+                      </div>
+                    </li>
+                    <li>Sábado
+                      <div> Das
+                        <input id="input_days"  type="text" size="1">:<input id="input_days" type="text" size="1">
+                          ás <input id="input_days" type="text" size="1">:<input id="input_days" type="text" size="1">
+                      </div>
+                    </li>
+                    <li>Domingo
+                      <div> Das
+                        <input id="input_days" type="text" size="1">:<input id="input_days" type="text" size="1">
+                          ás <input id="input_days" type="text" size="1">:<input id="input_days" type="text" size="1">
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div> 
+              <div id="pagamentos">
+              <div id="fms_pag">
+                <h2 >Formas de Pagamento</h2>
+              </div>
+                <div id="cnfg_pag">
+                  <h3>Dinheito</h3>
+                  <p>Desativado
                     <label class="switch"><input type="checkbox"><span class="slider"></span></label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ativado
-                </p>
-                </p>
-                <p>
-                <h1 style="margin-left: 10rem;">Pix</h3>
-                    <p id="io">Desativado &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label class="switch"><input type="checkbox"><span class="slider"></span></label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ativado
-                    </p>
-                    </p>
-                    <p style="margin-left: 10rem; margin-top: 4rem; font-size: larger;">
-                        <b>Taxa de entrega: &nbsp;&nbsp;&nbsp;</b> <input type="text" size="10">
-                    </p>
-                    <button type="button" class="btn btn-danger btn-lg mx-5" id="dfn1">Definir</button>
-
-        </div>
-
-        <div class="container-fluid" id="marid">
-            <h1 style="margin-bottom: 3rem;">Informações Gerais</h1>
-            <div class="mb-3">
-                <label for="nloja" class="form-label">Nome da loja</label>
-                <input type="email" class="form-control" id="nomeloja">
-            </div>
-            <div class="mb-3">
-                <label for="rsocial" class="form-label">Razão Social</label>
-                <input type="email" class="form-control" id="rsocial">
-            </div>
-            <div class="mb-3">
-                <label for="nfantasia" class="form-label">Nome Fantasia</label>
-                <input type="email" class="form-control" id="nfantasia">
-            </div>
-            <div class="mb-3">
-                <label for="cnpj" class="form-label">CNPJ</label>
-                <input type="email" class="form-control" id="cnpj">
-            </div>
-            <br>
-            <button type="button" class="btn btn-danger btn-lg mx-5" id="slv0">Salvar</button>
-        </div>
-
-        <div class="container-fluid" style="margin-bottom: 2rem;"id="marid">
-            <h1 style="margin-bottom: 3rem;">Endereço da Loja</h1>
-            <div class="mb-3">
-                <label for="endereço" class="form-label">Endereço</label>
-                <input type="email" class="form-control" id="endereço">
-            </div>
-            <div class="mb-3">
-                <label for="numero" class="form-label">Número</label>
-                <input type="email" class="form-control" id="numero">
-            </div>
-            <div class="mb-3">
-                <label for="bairro" class="form-label">Bairro</label>
-                <input type="email" class="form-control" id="bairro">
-            </div>
-            <div class="mb-3">
-                <label for="cep" class="form-label">CEP</label>
-                <input type="email" class="form-control" id="cep">
-            </div>
-            <div class="mb-3">
-                <label for="cidade" class="form-label">Cidade</label>
-                <input type="email" class="form-control" id="cidade">
-            </div>
-            <div class="mb-3">
-                <label for="estado" class="form-label">Estado</label>
-                <input type="email" class="form-control" id="estado">
-            </div>
-            <div class="mb-3">
-                <label for="complemento" class="form-label">Complemento *<i>(não obrigatorio)</i></label>
-                <input type="email" class="form-control" id="complemento">
-            </div>
-            <button type="button" class="btn btn-danger btn-lg mx-5" id="slv1">Salvar</button>
-        </div>
-    </div>
-
-</main>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"></script>
-        <script src="../static/javascript/configurações.js"></script>
+                  Ativado</p>
+                </div>
+                <div id="cnfg_pag">
+                  <h3>Pix</h3>
+                  <p>Desativado
+                    <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                  Ativado</p>
+                </div>
+                <div id="cnfg_pag">
+                  <h3>Taxa de Entrega</h3>
+                  <input id="input_tx" type="text" size="7">
+                  
+                </div>
+              </div>
+              <div id="infGr">
+                    <div id="infG">
+                      <h2>Informações Gerais</h2>
+                    </div>
+                    <div class="input_boxC">
+                      <div>
+                        <label for="password"> Nome da Loja
+                          <div class="input_fieldC">
+                              <input type="name" id="name" name="name">
+                          </div>
+                        </label>
+                      </div>
+                      <div>
+                        <label for="password"> Razão Social
+                          <div class="input_fieldC">
+                              <input type="name" id="name" name="name">
+                          </div>
+                        </label>
+                      </div>
+                      <div>
+                        <label for="password"> Nome Fantasia
+                          <div class="input_fieldC">
+                              <input type="name" id="name" name="name">
+                          </div>
+                        </label>
+                      </div>
+                      <div>
+                      <label for="password"> CNPJ
+                        <div class="input_fieldC">
+                            <input type="name" id="name" name="name">
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+              </div>
+              <div id="infend">
+                <div id="endereco">
+                  <h2>Endereço da Loja</h2>
+                </div>
+                <div class="input_boxC">
+                  <div>
+                    <label for="password"> CEP
+                      <div class="input_fieldC">
+                          <input type="name" id="name" name="name">
+                      </div>
+                    </label>
+                  </div>
+                  <div>
+                    <label for="password"> Rua
+                      <div class="input_fieldC">
+                          <input type="name" id="name" name="name">
+                      </div>
+                    </label>
+                  </div>
+                  <div>
+                    <label for="password"> Número
+                      <div class="input_fieldC">
+                          <input type="name" id="name" name="name">
+                      </div>
+                    </label>
+                  </div>
+                  <div>
+                  <label for="password"> Cidade
+                    <div class="input_fieldC">
+                        <input type="name" id="name" name="name">
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <label for="password"> Bairro
+                    <div class="input_fieldC">
+                        <input type="name" id="name" name="name">
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <label for="password"> Estado
+                    <div class="input_fieldC">
+                        <input type="name" id="name" name="name">
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <label for="password"> Complemento 
+                    <div class="input_fieldC">
+                        <input type="name" id="name" name="name">
+                    </div>
+                  </label>
+                </div>
+              </div>
+          </div>
+          </div>
+      </main>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </html>
