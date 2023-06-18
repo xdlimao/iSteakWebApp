@@ -13,6 +13,7 @@
     align-items:center ;
     justify-content: center;
 }
+
 #container h4{
     font-size:20px ;
     position: relative;
@@ -40,6 +41,29 @@
     width: 250px;
     background-color: #F04242;
     padding: 4.5px;
+}
+.cadastro{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 40px;
+    border-radius: 10px 0px 0px 10px;
+    gap: 50px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.336);
+    border-top: 2px solid rgba(0, 0, 0, 0.336) ;
+    border-left:2px solid rgba(0, 0, 0, 0.336) ;
+}
+.cadastro img{
+   width: 188px;
+}
+#btn-cadastro{
+    width: 100%;
+    border: none;
+    background-color: #F04242;
+    padding: 5px;
     font-size: 18px;
     font-weight: bold;
     border-radius: 10px;
@@ -47,6 +71,7 @@
     letter-spacing: 3px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.336);
 }
+
 #cadastro_button a{
     text-decoration: none;
     color: white;
@@ -55,6 +80,14 @@
     transform: scale(1.05);
 }
 
+
+#btn-cadastro a{
+    text-decoration: none;
+    color: white;
+}
+#btn-cadastro:hover{
+    transform: scale(1.05);
+}
 
 
 #login_form{
