@@ -142,3 +142,10 @@ main{
 .select input:hover {
     background-color: #eeeeee75;
 }
+.icon-filter{
+ justify-content: end;
+display: flex;
+align-items: end;
+margin-right: 20px;
+
+}
