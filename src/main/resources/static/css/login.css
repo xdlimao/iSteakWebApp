@@ -71,16 +71,6 @@
     letter-spacing: 3px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.336);
 }
-
-#cadastro_button a{
-    text-decoration: none;
-    color: white;
-}
-#cadastro_button:hover{
-    transform: scale(1.05);
-}
-
-
 #btn-cadastro a{
     text-decoration: none;
     color: white;
