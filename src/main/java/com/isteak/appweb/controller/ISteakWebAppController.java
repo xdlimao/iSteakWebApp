@@ -1,6 +1,5 @@
 package com.isteak.appweb.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +11,7 @@ import com.isteak.appweb.model.AdmLogin;
 import com.isteak.appweb.repository.AdmLoginRepository;
 
 @Controller
-@RequestMapping()
+@RequestMapping("/")
 public class ISteakWebAppController {
 	
 		private AdmLoginRepository admLoginRepository;
