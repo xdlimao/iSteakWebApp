@@ -1,6 +1,5 @@
 package com.isteak.appweb.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.isteak.appweb.model.AdmLogin;
@@ -9,7 +8,6 @@ import com.isteak.appweb.repository.AdmLoginRepository;
 @Service
 public class AdmLoginService {
 
-	@Autowired
 	private AdmLoginRepository admLoginRepository;
 
     public boolean isValidUser(String USUARIO, String SENHA) {

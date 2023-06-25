@@ -15,8 +15,7 @@ import com.isteak.appweb.repository.AdmLoginRepository;
 @RequestMapping()
 public class ISteakWebAppController {
 	
-	@Autowired
-	private AdmLoginRepository admLoginRepository;
+		private AdmLoginRepository admLoginRepository;
 	
 		@GetMapping("/dashboard")
 		public String getDashboard() {
