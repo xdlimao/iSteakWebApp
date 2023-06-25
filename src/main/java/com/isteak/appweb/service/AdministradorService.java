@@ -13,8 +13,7 @@ public class AdministradorService {
 
 	//LEMBRANDO QUE O SISTEMA DE LOGIN VAI SER PARECIDO COMO UM ROTEADOR DE WI-FI
 	//UM ÚNICO LOGIN MESTRE QUE PODE SE ALTERAR A SENHA
-	
-	@Autowired
+
 	private AdministradorRepository administradorRepository;
 	
 	public Administrador salvarAdministrador(Administrador admin) {

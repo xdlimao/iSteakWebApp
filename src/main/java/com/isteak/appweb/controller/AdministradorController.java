@@ -18,10 +18,7 @@ import com.isteak.appweb.service.AdministradorService;
 @RestController
 @RequestMapping("/api/administrador")
 public class AdministradorController {
-//peralta
-	//peralta2
-	//peralta3
-	@Autowired
+
 	private AdministradorService administradorService;
 
 	@PostMapping
