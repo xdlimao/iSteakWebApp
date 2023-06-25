@@ -11,7 +11,7 @@ import com.isteak.appweb.model.AdmLogin;
 import com.isteak.appweb.repository.AdmLoginRepository;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("")
 public class ISteakWebAppController {
 	
 		private AdmLoginRepository admLoginRepository;
