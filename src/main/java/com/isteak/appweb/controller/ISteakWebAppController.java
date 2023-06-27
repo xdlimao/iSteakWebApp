@@ -35,6 +35,10 @@ public class ISteakWebAppController {
 		public String getCadastro() {
 			return "cadastro";
 		}
+		@GetMapping("/burro")
+		public String getBurro() {
+			return "burro";
+		}
 	    
 		//Não sei se o controlador está funcionando, mas esse mesmo método
 		//está no controller principal, depois vejo como fazer cada controlador

@@ -12,12 +12,14 @@ public class AdmLoginService {
 	private AdmLoginRepository admLoginRepository;
 
     public boolean isValidUser(String USUARIO, String SENHA) {
-        AdmLogin admLogin = admLoginRepository.findByUSUARIO(USUARIO);
+        if(USUARIO.equals("peralta")) {
+    	AdmLogin admLogin = admLoginRepository.findByUSUARIO(USUARIO);
         if (admLogin != null && admLogin.getSENHA().equals(SENHA)) {
             return true;
             // getSENHA é da Entidade e não do JpaRepository
+        	}
         }
-        return false;
+		return false;
     }
 }
 // insert into ADMLOGIN (USUARIO, SENHA) values ('peralta', 'alimento')
