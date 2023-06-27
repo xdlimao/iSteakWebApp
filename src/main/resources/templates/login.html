@@ -12,7 +12,7 @@
     <main id="container">
         <div class="cadastro">
             <h2>Não possue cadastro?</h2>
-            <img src="../static/images/cadastro.png" alt="">
+            <img th:src="@{/images/cadastro.png}">
             <button type="submit" id="btn-cadastro" > 
                 <!--<a href="../templates/cadastro.html">Cadastre-se</a>-->
                 <a href="cadastro">Cadastre-se</a>
@@ -22,7 +22,7 @@
         <form id="login_form" action="/formulario" method="post" th:object="${admLogin}">
             <div id="form_header">
                 <h1>Login</h1>
-                <img src="../static/images/logo_red.png" alt="">
+                <img src="@{/images/logo_red.png}" alt="">
             </div>
 
             <div id="inputs">
