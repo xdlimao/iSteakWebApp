@@ -49,13 +49,20 @@ public class ISteakWebAppController {
 	        model.addAttribute("admLogin", new AdmLogin());
 	        return "login";
 	    }
+		
+		@GetMapping("/loginerror")
+	    public String exibirFormularioErro(Model model) {
+	        model.addAttribute("admLogin", new AdmLogin());
+	        return "loginerror";
+	    }
+		
 	    @PostMapping("/formulario")
 	    public String processarFormulario(@ModelAttribute("admLogin") AdmLogin admLogin) {
 	    	AdmLogin admLoginFromDB = admLoginRepository.findByUSUARIO(admLogin.getUSUARIO());
 	        if (admLoginFromDB != null && admLoginFromDB.getSENHA().equals(admLogin.getSENHA())) {
 	            return "redirect:/dashboard";
 	        } else {
-	    	return "redirect:/burro";
+	        	return "redirect:/loginerror";
 	        }
 	    }	    
 }
