@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+    <main id="container">
+        <div class="cadastro">
+            <h2>Não possue cadastro?</h2>
+            <img th:src="@{/images/cadastro.png}">
+            <button type="submit" id="btn-cadastro" > 
+                <!--<a href="../templates/cadastro.html">Cadastre-se</a>-->
+                <a href="cadastro">Cadastre-se</a>
+            </button>
+        </div>
+
+        <form id="login_form" action="/formulario" method="post" th:object="${admLogin}">
+            <div id="form_header">
+                <h1>Login</h1>
+                <img src="@{/images/logo_red.png}" alt="">
+            </div>
+
+            <div id="inputs">
+                <div class="input_box">
+                    <label for="email">Usuário
+                        <div class="input_field">
+                            <i><ion-icon name="person-outline"></ion-icon></i>
+                            <input type="text" id="email" name="email" th:field="*{USUARIO}" required>
+                        </div>
+                    </label>
+                </div>
+                <div class="input_box">
+                    <label for="password">Senha
+                        <div class="input_field">
+                            <i><ion-icon name="key-outline"></ion-icon></i>
+                            <input type="password" id="password" name="password" th:field="*{SENHA}" required>
+                        </div>
+                    </label>
+                    
+                    <div id="forgot_password">
+                        <a href="#">Esqueceu sua senha?</a>
+                    </div>
+                	<div>
+                		                		<h4>Dados Incorretos</h4>
+                	</div>
+                </div>
+            </div>
+           
+
+            
+
+            <!--<button type="submit" id="login_button" > 
+                <a href="../templates/dashboard.html">Entrar</a>
+            </button>-->
+            <input type="submit" id="login_button" value="Entrar"> 
+
+        </form>
+    </main>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
