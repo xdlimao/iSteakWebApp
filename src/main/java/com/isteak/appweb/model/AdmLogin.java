@@ -1,5 +1,6 @@
 package com.isteak.appweb.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -10,6 +11,8 @@ public class AdmLogin {
 
 	@Id
 	private String USUARIO;
+	
+	@Column(name = "SENHA")
 	private String SENHA;
 	public String getUSUARIO() {
 		return USUARIO;
