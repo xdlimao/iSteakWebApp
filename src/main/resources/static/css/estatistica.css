@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top:0;
+    left: 0;
+    
+}
+main{
+    padding-top: 100px
+}
 .cxaval {
     border: 1px solid black;
     padding: 50px;
@@ -22,4 +39,19 @@
 }
 #gridlows {
     margin-top: 6rem;
+}
+#img_grafc{
+    width: 500px;
+    height: 100%;;
+    border: 3px solid #F04242 ;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1rem; 
+    background-color: #D9D9D9;
+}
+.checked { /*Estrelas*/
+    color: orange;
+}
+#margin_left {
+    margin-left: 9rem;
 }
